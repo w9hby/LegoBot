@@ -12,7 +12,7 @@ dcPin2 = 19
 
 GPIO.setup(dcPin1, GPIO.OUT)
 GPIO.setup(dcPin2, GPIO.OUT)
-servo.set_servo(servoPin, 1450)
+servo.set_servo(servoPin, 1500)
 
 def Backward():
     GPIO.output(dcPin1, True)
@@ -43,31 +43,31 @@ try:
             break
         elif char == curses.KEY_RIGHT and pos < 7:  
         	if pos == 1: 
-        	     servo.set_servo(servoPin, 750)    #this will send 4.0 ms pulse
+        	     servo.set_servo(servoPin, 900)    #this will send 4.0 ms pulse
         	elif pos == 2: 
-        	     servo.set_servo(servoPin, 1100)    #this will send 7.5 ms pulse
+        	     servo.set_servo(servoPin, 1200)    #this will send 7.5 ms pulse
         	elif pos == 3: 
-        	     servo.set_servo(servoPin, 1450)    #this will send 11.0 ms pulse
+        	     servo.set_servo(servoPin, 1500)    #this will send 11.0 ms pulse
         	elif pos == 4: 
         	     servo.set_servo(servoPin, 1800)    #this will send 14.5 ms pulse
         	elif pos == 5: 
-        	     servo.set_servo(servoPin, 2150)    #this will send 18.8 ms pulse
+        	     servo.set_servo(servoPin, 2100)    #this will send 18.8 ms pulse
         	elif pos == 6: 
-        	     servo.set_servo(servoPin, 2500)    #this will send 21.5 ms pulse
+        	     servo.set_servo(servoPin, 2400)    #this will send 21.5 ms pulse
 		pos += 1
         elif char == curses.KEY_LEFT and pos > 1:  
         	if pos == 2: 
-        	     servo.set_servo(servoPin, 400)    #this will send 7.5 ms pulse
+        	     servo.set_servo(servoPin, 600)    #this will send 7.5 ms pulse
         	elif pos == 3: 
-        	     servo.set_servo(servoPin, 750)    #this will send 11.0 ms pulse
+        	     servo.set_servo(servoPin, 900)    #this will send 11.0 ms pulse
         	elif pos == 4: 
-        	     servo.set_servo(servoPin, 1100)    #this will send 14.5 ms pulse
+        	     servo.set_servo(servoPin, 1200)    #this will send 14.5 ms pulse
         	elif pos == 5: 
-        	     servo.set_servo(servoPin, 1450)    #this will send 18.8 ms pulse
+        	     servo.set_servo(servoPin, 1500)    #this will send 18.8 ms pulse
         	elif pos == 6: 
         	     servo.set_servo(servoPin, 1800)    #this will send 21.5 ms pulse
         	elif pos == 7: 
-        	     servo.set_servo(servoPin, 2150)    #this will send 25.0 ms pulse
+        	     servo.set_servo(servoPin, 2100)    #this will send 25.0 ms pulse
 		pos -= 1
         elif char == curses.KEY_UP:
             screen.addstr(4, 0, 'UP   ')  
